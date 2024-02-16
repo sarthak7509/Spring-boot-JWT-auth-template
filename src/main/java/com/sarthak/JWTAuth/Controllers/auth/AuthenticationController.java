@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
+@ControllerAdvice
 public class AuthenticationController {
     private  final AuthenticationService service;
     @PostMapping("/register")
@@ -19,7 +20,6 @@ public class AuthenticationController {
     ){
         //
         return ResponseEntity.ok(service.register(request));
-
     }
 
     @PostMapping("/authenticate")

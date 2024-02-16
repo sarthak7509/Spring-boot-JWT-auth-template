@@ -1,5 +1,6 @@
 package com.sarthak.JWTAuth.Service;
 
+import com.sarthak.JWTAuth.Controllers.errors.UserAleradyExist;
 import com.sarthak.JWTAuth.Domain.Dao.AuthenticationRequest;
 import com.sarthak.JWTAuth.Domain.Dao.AutheticationResponse;
 import com.sarthak.JWTAuth.Domain.Dao.RegisterRequest;
@@ -11,7 +12,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
+import org.postgresql.util.PSQLException;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
